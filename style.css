@@ -26,32 +26,32 @@ body {
     "tl tl tl"
     "main main main"
     "in1 in2 in3";
-    padding: auto;
-    height: 100%;
+    /* height: 100%; */
     justify-content: center;
 
     overflow: hidden;
     align-content: center;
     background-color: hsl(244, 38%, 16%);
     border-radius: 25px 0px 0px 25px;
-    padding: 50px;
+    padding: 70px;
 }
 
 .image {
     width: 100%;
+    height: 100%;
     opacity: .5;
     border-radius: 0px 25px 25px 0px;
 }
 
 .title {
-    width: 500px;
-    margin:auto;
+    /* width: 500px; */
+    /* margin:auto; */
     font-family: 'Lexend Deca', sans-serif;
     color: hsl(0, 0%, 100%);
 }
 
 .content {
-    width: 500px;
+    /* width: 500px; */
     margin: 0px auto;
     font-family: 'Inter', sans-serif;
     font-size: 15px;
@@ -64,6 +64,7 @@ span.stats {
     font-family: 'Inter', sans-serif;
     color: hsl(0, 0%, 100%);
     font-weight: 700;
+    font-size:xx-large;
 }
 
 span.accent {
@@ -74,8 +75,35 @@ p.info {
     font-family: 'Inter', sans-serif;
     color: hsla(0, 0%, 100%, 0.6);
     text-transform: uppercase;
-    margin: 0px;
+    /* margin: 0px auto; */
 }
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        border-radius: 25px;
+        grid-template-columns: 1fr;
+        margin-bottom: 100px;
+    }
+    .text {
+        grid-template-rows: 1fr 1fr .5fr .5fr .5fr;
+        grid-template-areas:
+        "tl tl tl"
+        "main main main"
+        "in1 in1 in1"
+        "in2 in2 in2"
+        "in3 in3 in3";
+        text-align: center;
+        border-radius: 0px 0px 25px 25px;
+        padding: 70px;
+        order: 1; /* moves picture to the top, mobil view*/
+    }
+
+    
+    
+    .image {
+        border-radius: 0px;
+    }
+  }
 
 
     .attribution { font-size: 11px; text-align: center; color: hsla(0, 0%, 100%, 0.6);  }
